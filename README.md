@@ -4,7 +4,7 @@ This guide will help you set up your Crm-mini development environment and introd
 
 ## 🛠️ Setting Up Your Development Environment
 
-To ensure a smooth and efficient development experience with Anitalk, please align your local environment with the following core versions:
+To ensure a smooth and efficient development experience with Crm-mini, please align your local environment with the following core versions:
 
 ```bash
 Node.js: v20.18.0^
@@ -32,7 +32,7 @@ cd frontend
 
 ## Install Dependencies:
 
-Once you've navigated into the project directory, you need to install the necessary dependencies. Anitalk uses either Yarn, npm, or pnpm as a package manager. Choose your preferred one and run the corresponding command:
+Once you've navigated into the project directory, you need to install the necessary dependencies. Crm-mini uses either Yarn, npm, or pnpm as a package manager. Choose your preferred one and run the corresponding command:
 
 ```
 yarn install
@@ -141,7 +141,7 @@ Open your web browser and navigate to http://localhost:3000 or http://127.0.0.1:
 
 This project is publicly accessible for use and collaboration; however:
 
-- You may NOT sell, resell, or redistribute this project or any part of it commercially without explicit written permission from Anitalk.
+- You may NOT sell, resell, or redistribute this project or any part of it commercially without explicit written permission from Crm-mini.
 - Usage, modification, and personal or educational use are permitted.
 - The software is provided "as is," without any warranty.
 
