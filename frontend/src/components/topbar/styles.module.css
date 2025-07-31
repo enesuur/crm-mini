@@ -1,0 +1,9 @@
+.headerBox {
+  width: 100%;
+  border-bottom: 2px solid var(--gray);
+  padding: var(--spacing-md) var(--spacing-md);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  height: 4rem;
+}

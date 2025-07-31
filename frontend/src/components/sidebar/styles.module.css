@@ -1,0 +1,150 @@
+.sidebar {
+  height: 100vh;
+  background-color: var(--background-color);
+  border-right: 2px solid var(--gray);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  z-index: 1050;
+}
+
+.sidebarCollapsed {
+  width: 4rem;
+}
+
+.sidebarExpanded {
+  width: 16rem;
+}
+
+.headerBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+  height: 5rem;
+  border-bottom: 2px solid var(--gray);
+}
+
+.headerBox.collapsed {
+  justify-content: start;
+}
+
+.panelTitle {
+  font-size: var(--font-size-base);
+}
+
+.collapsedPanelTitle {
+  font-size: var(--font-size-sm);
+}
+
+.btnToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toggleIcon,
+.btnToggle {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.toggleIcon:hover {
+  cursor: pointer;
+}
+
+.nav {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  gap: var(--spacing-base);
+  padding: var(--spacing-md);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.linkActive {
+  background-color: var(--hover-color);
+  font-weight: 600;
+}
+
+.icon {
+  font-size: 1.25rem;
+}
+
+.mobileMenuButton {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 999;
+  backdrop-filter: blur;
+  border: 2px solid var(--gray);
+  padding: var(--spacing-base);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .sidebarCollapsed,
+  .sidebarExpanded {
+    width: 0;
+  }
+
+  .sidebarMobileClosed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    z-index: 999;
+  }
+
+  .sidebarMobileOpen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 16rem;
+    background-color: var(--background-color);
+    border-right: 2px solid var(--gray);
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    z-index: 1000;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .mobileMenuButton {
+    display: block;
+  }
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+  }
+}

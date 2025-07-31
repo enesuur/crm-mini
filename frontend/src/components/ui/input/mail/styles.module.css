@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-sm);
+}
+
+.container label {
+  font-size: var(--font-size-sm);
+  letter-spacing: var(--letter-spacing);
+  opacity: var(--opacity);
+  font-weight: 500;
+}
+
+.container input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 8 40px;
+  border-radius: var(--border-radius);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: var(--font-size-sm);
+}
+
+.container input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.container input::placeholder {
+  opacity: var(--opacity);
+}
+
+.container .errorContainer {
+  display: flex;
+  align-items: center;
+  column-gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  letter-spacing: var(--letter-spacing);
+  color: var(--red);
+  opacity: var(--opacity);
+  transform: translateY(-10px);
+  animation: errorMessageIn 0.3s ease-in-out forwards;
+}
+
+.container .errorContainer.hidden {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: errorMessageOut 0.3s ease-in-out forwards;
+}
+
+.mailBox {
+  position: absolute;
+  top: 50%;
+  left: var(--spacing-md);
+  transform: translateY(-50%);
+  color: var(--font-black);
+  opacity: 0.3;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes errorMessageIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes errorMessageOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}

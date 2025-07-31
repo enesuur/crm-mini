@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: var(--spacing-sm);
+}
+
+.container .label {
+  font-size: var(--font-size-sm);
+  letter-spacing: var(--letter-spacing);
+  opacity: var(--opacity);
+}
+
+.container .textarea {
+  display: inline-block;
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--border-radius);
+  border: 2px solid var(--gray);
+  background-color: var(--white);
+  transition: border-color 0.3s ease-in-out;
+  font-size: var(--font-size-sm);
+  resize: vertical;
+  min-height: 256px;
+  max-height: 512px;
+}
+
+.container .textarea:focus {
+  border-color: var(--primary-color);
+}
+
+.container .textarea::placeholder {
+  opacity: var(--opacity);
+  font-style: italic;
+}
+
+.container .errorContainer {
+  display: flex;
+  align-items: center;
+  column-gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  letter-spacing: var(--letter-spacing);
+  color: var(--red);
+  opacity: var(--opacity);
+}
+
+.errorContainer svg {
+  color: var(--red);
+  opacity: var(--opacity);
+}
+
+/* TODO: -red */
+.container .textareaError {
+  border-color: var(--primary-color);
+}

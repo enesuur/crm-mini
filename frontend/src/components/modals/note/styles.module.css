@@ -1,0 +1,114 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modalContent {
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-4xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeIn 0.3s ease-out forwards;
+  user-select: none;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalHeader h2 {
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing);
+}
+
+.btnClose {
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.btnClose:hover {
+  opacity: 1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.dateInput {
+  border-radius: var(--border-radius);
+  padding: var(--spacing-base);
+  border: 2px solid var(--gray);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+}
+
+.dateInput:focus {
+  border: 2px solid var(--primary-color);
+  outline: none;
+}
+
+.textArea {
+  border-radius: var(--border-radius);
+  padding: var(--spacing-base);
+  border: 2px solid var(--gray);
+  font-size: 14px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.textArea:focus {
+  border: 2px solid var(--primary-color);
+  outline: none;
+}
+
+.btnContainer {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+.error {
+  font-size: var(--font-size-sm);
+  color: var(--red);
+}
+
+.btnContainer button {
+  flex: 1;
+}

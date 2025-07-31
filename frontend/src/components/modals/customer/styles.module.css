@@ -1,0 +1,111 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1999;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  background-color: var(--background-color);
+  padding: var(--spacing-4xl);
+  border-radius: var(--border-radius);
+  width: 100%;
+  max-width: 600px;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeIn 0.4s forwards;
+  user-select: none;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btnClose {
+  font-size: var(--font-size-md);
+  transition: opacity 0.3s ease-in;
+  cursor: pointer;
+}
+
+.modalHeader h2 {
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing);
+}
+
+.errorText {
+  color: var(--red);
+  margin-top: var(--spacing-md);
+  font-size: var(--font-size-sm);
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: var(--spacing-md);
+}
+
+.checkboxInput {
+  display: none;
+}
+
+.checkboxGroup {
+  margin: var(--spacing-base) 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-base);
+}
+
+.checkboxLabel {
+  font-size: var(--font-size-sm);
+  opacity: var(--opacity);
+  font-weight: 500;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  margin: var(--spacing-xl) 0;
+}
+
+.btnContainer button {
+  flex: 1;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-base);
+}
+
+.errorMessage {
+  color: var(--red);
+  font-size: var(--font-size-sm);
+}

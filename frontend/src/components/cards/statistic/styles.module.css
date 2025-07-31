@@ -1,0 +1,31 @@
+.card {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  border-radius: 8px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 220px;
+}
+
+.icon {
+  font-size: 28px;
+  color: #2563eb; /* primary blue */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 14px;
+  color: #6b7280; /* gray */
+  margin: 0 0 4px 0;
+}
+
+.count {
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0;
+  color: #111827; /* dark */
+}

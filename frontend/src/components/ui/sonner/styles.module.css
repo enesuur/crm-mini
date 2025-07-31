@@ -1,0 +1,40 @@
+.sonnerBox {
+  position: fixed;
+  top: 128px;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: 400px;
+  background-color: var(--background-color);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius);
+  animation: slideIn 0.3s forwards;
+  z-index: 99999;
+  max-width: 350px;
+  min-width: 280px;
+  font-size: var(--font-size-sm);
+  border: 2px solid var(--gray);
+}
+
+.title {
+  opacity: 1;
+}
+
+.messageBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.messageText {
+  display: inline-block;
+  opacity: var(--opacity);
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}

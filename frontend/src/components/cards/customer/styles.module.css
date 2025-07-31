@@ -1,0 +1,63 @@
+.cardBox {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  border: 2px solid var(--gray);
+  border-radius: var(--border-radius);
+  height: 192px;
+  padding: var(--spacing-md);
+  background-color: var(--white);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-base);
+}
+
+.row {
+  display: flex;
+  gap: 6px;
+  font-size: 14px;
+  align-items: center;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.value {
+  word-break: break-word;
+}
+
+.actionsBox {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-base);
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: var(--spacing-base);
+}
+
+.btnIcon {
+  cursor: pointer;
+}
+
+.highPriority {
+  color: var(--red);
+  font-weight: bold;
+}
+
+.mediumPriority {
+  color: var(--orange);
+  font-weight: bold;
+}
+
+.lowPriority {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.defaultPriority {
+  color: var(--gray);
+}

@@ -1,0 +1,54 @@
+.title {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.emptyMessage {
+  opacity: var(--opacity);
+}
+
+.userGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.filterSection {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-base);
+  margin: var(--spacing-xl) 0;
+}
+
+.filterSection input {
+  padding: var(--spacing-base);
+  width: 60%;
+  margin-right: var(--spacing-base);
+  font-size: var(--font-size-base);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  min-width: 12rem;
+}
+
+.filterSection select {
+  padding: var(--spacing-base);
+  font-size: var(--font-size-base);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  min-width: 8rem;
+}
+
+@media screen and (max-width: 768px) {
+  .filterSection {
+    flex-direction: column;
+  }
+  .filterSection input {
+    width: 100%;
+  }
+
+  .filterSection select {
+    width: 100%;
+  }
+}

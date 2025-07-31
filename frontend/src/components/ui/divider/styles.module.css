@@ -1,0 +1,32 @@
+.dividerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: var(--spacing-md) 0;
+}
+
+.dividerContainer::before,
+.dividerContainer::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--gray);
+}
+
+.dividerText {
+  font-size: var(--font-size-sm);
+  margin: 0 var(--spacing-sm);
+  opacity: var(--opacity);
+}
+
+.noText::before,
+.noText::after {
+  content: "";
+  border-bottom: 1px solid var(---gray);
+  flex: 1;
+}
+
+.noText > span {
+  display: none;
+}

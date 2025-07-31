@@ -1,0 +1,56 @@
+.formBox {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-lg);
+  max-width: 512px;
+  margin: 0 auto;
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius);
+  border: 2px solid var(--gray);
+  box-sizing: border-box;
+}
+
+/* Responsive için */
+@media (max-width: 600px) {
+  .formBox {
+    max-width: 100%;
+    padding: var(--spacing-md);
+    border-width: 1px;
+  }
+
+  .authTitle {
+    font-size: calc(var(--font-size-lg) * 0.9);
+  }
+
+  .authSubtitle {
+    font-size: calc(var(--font-size-sm) * 0.9);
+  }
+
+  .formFooter {
+    font-size: calc(var(--font-size-sm) * 0.85);
+    margin: var(--spacing-sm) 0;
+  }
+}
+
+.authTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  text-align: center;
+  opacity: var(--opacity);
+}
+
+.authSubtitle {
+  font-size: var(--font-size-sm);
+  opacity: var(--opacity);
+  text-align: center;
+}
+
+.formFooter {
+  text-align: center;
+  margin: var(--spacing-base) 0;
+  font-size: var(--font-size-sm);
+}
+
+.formFooter span {
+  margin-right: var(--spacing-sm);
+}
